@@ -44,9 +44,10 @@ html { scroll-behavior:smooth; }
 
 .logo {
   font-family: 'Playfair Display', serif;
-  font-size: 3.5rem; /* mărimea literei S */
+  font-size: 8rem; /* mărimea literei S */
   font-weight: 700;
   color: #d4af37; /* culoarea aurie */
 }
+
 
 

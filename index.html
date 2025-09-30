@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartier Rezidențial - Case de Lux Craiova</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    /* Reset și fonturi */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Roboto', sans-serif; background:#fffaf0; color:#333; line-height:1.6; }
+
+    /* Culori premium */
+    :root {
+      --negru:#111;
+      --auriu:#d4af37;
+      --alb:#ffffff;
+      --gri:#f4f4f4;
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--negru), #222);
+      color: var(--auriu);
+      text-align:center;
+      padding:50px 20px;
+    }
+    header h1 { font-family:'Playfair Display', serif; font-size:3rem; margin-bottom:15px; }
+    header p { font-size:1.3rem; color:#f0e6d2; }
+
+    section { padding:60px 20px; max-width:1100px; margin:auto; }
+    h2 { font-family:'Playfair Display', serif; font-size:2.5rem; color:var(--negru); text-align:center; margin-bottom:30px; border-bottom:2px solid var(--auriu); display:inline-block; padding-bottom:5px; }
+
+    p { font-size:1.1rem; color:#333; margin-bottom:20px; text-align:justify; }
+
+    ul { list-style:none; padding:0; }
+    ul li {
+      background:#fff8dc;
+      margin:12px 0;
+      padding:15px 20px;
+      border-left:6px solid var(--auriu);
+      border-radius:8px;
+      font-size:1.1rem;
+    }
+
+    /* Galerie foto */
+    .gallery { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:30px; }
+    .gallery img {
+      width:300px;
+      border-radius:12px;
+      box-shadow:0 6px 15px rgba(0,0,0,0.3);
+      transition: transform 0.4s, box-shadow 0.4s;
+      cursor:pointer;
+    }
+    .gallery img:hover { transform: scale(1.05); box-shadow:0 10px 20px rgba(0,0,0,0.5); }
+
+    /* Lightbox */
+    .lightbox {
+      display:none;
+      position:fixed;
+      z-index:9999;
+      top:0; left:0;
+      width:100%; height:100%;
+      background: rgba(0,0,0,0.9);
+      justify-content:center; align-items:center;
+    }
+    .lightbox img {
+      max-width:90%;
+      max-height:90%;
+      border-radius:12px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.7);
+    }
+    .lightbox:target { display:flex; }
+
+    /* Contact & CTA */
+    .contact-section { background:var(--negru); color:var(--alb); text-align:center; padding:60px 20px; }
+    .contact-section h2 { color:var(--auriu); }
+    .contact-section p { font-size:1.2rem; margin-bottom:10px; }
+    .contact-section span { color:var(--auriu); font-weight:bold; }
+    .contact-section a {
+      display:inline-block; margin:15px; padding:15px 35px;
+      background:var(--auriu); color:var(--negru);
+      font-size:18px; border-radius:10px; text-decoration:none; transition:0.3s;
+    }
+    .contact-section a:hover { background:#b28c20; }
+
+    .contact-section form {
+      margin-top:40px; max-width:500px; margin-left:auto; margin-right:auto; text-align:left;
+      background:#222; padding:20px; border-radius:12px;
+    }
+    .contact-section label { display:block; margin-bottom:5px; font-weight:bold; color:#fff; }
+    .contact-section input, .contact-section textarea {
+      width:100%; padding:10px; margin-bottom:15px; border-radius:5px; border:none;
+    }
+    .contact-section button {
+      padding:12px 25px; background:var(--auriu); color:var(--negru);
+      border:none; border-radius:8px; font-size:18px; cursor:pointer; transition:0.3s;
+    }
+    .contact-section button:hover { background:#b28c20; }
+
+    /* Harta */
+    .map-container { margin-top:40px; border:4px solid var(--auriu); border-radius:12px; overflow:hidden; }
+    .map-container iframe { width:100%; height:400px; border:0; }
+
+    footer {
+      background:var(--negru); color:var(--auriu); text-align:center; padding:30px 20px; margin-top:40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Cartier Rezidențial - Case de Lux Craiova Panoramic</h1>
+    <p>Case moderne, spațioase și complet utilate, cu panoramă asupra orașului</p>
+  </header>
+
+  <!-- DESPRE CARTIER -->
+  <section id="despre">
+    <h2>Despre Cartier</h2>
+    <p>
+      Cartierul nostru rezidențial din Craiova este destinat celor care își doresc o casă de lux,
+      confort și siguranță, într-o zonă liniștită, dar foarte aproape de centrul orașului.
+      Amplasat la doar <strong>5 minute de Electroputere Mall</strong>, cartierul beneficiază
+      de <strong>drum asfaltat</strong>, acces rapid la transport și o priveliște spectaculoasă
+      asupra întregului oraș.
+    </p>
+  </section>
+
+  <!-- DETALII CASE -->
+  <section id="detalii">
+    <h2>Detalii Case</h2>
+    <p>
+      Casele au o suprafață utilă de <strong>120 mp</strong>, compartimentate inteligent și construite
+      pe un teren generos de <strong>500–600 mp</strong>. Fiecare locuință este realizată
+      cu materiale premium, rezistente și eficiente energetic:
+    </p>
+    <ul>
+      <li>🧱 Structură din <strong>BCA Ytong</strong> + termosistem performant</li>
+      <li>🪟 <strong>Tâmplărie QFort</strong> – eficiență termică și fonică maximă</li>
+      <li>🌇 Panoramă unică asupra Craiovei</li>
+      <li>🌳 Curte privată mare, perfectă pentru relaxare și amenajări</li>
+    </ul>
+  </section>
+
+  <!-- FACILITĂȚI -->
+  <section id="facilitati">
+    <h2>Facilități & Dotări</h2>
+    <p>
+      Toate casele sunt complet racordate la utilități și livrate la cheie,
+      astfel încât să te muți imediat:
+    </p>
+    <ul>
+      <li>💧 Apă curentă racordată la rețeaua orașului</li>
+      <li>🚰 Canalizare conectată la sistemul public</li>
+      <li>🔥 Gaz metan pentru centrală proprie</li>
+      <li>♨️ Încălzire în pardoseală pentru confort maxim</li>
+      <li>🛋 Casă la cheie, complet finisată</li>
+      <li>🟫 Parchet stratificat de 14 mm – culori la alegere</li>
+      <li>🟦 Gresie și faianță premium, modele de top</li>
+      <li>🚪 Uși interioare de calitate superioară</li>
+      <li>🔒 Siguranță sporită prin materiale și finisaje premium</li>
+    </ul>
+  </section>
+
+  <!-- GALERIE FOTO CU LIGHTBOX -->
+  <section id="galerie">
+    <h2>Galerie Foto</h2>
+    <div class="gallery">
+      <a href="#img1"><img src="poze/casa1.jpg"></a>
+      <a href="#img2"><img src="poze/casa2.jpg"></a>
+      <a href="#img3"><img src="poze/casa3.jpg"></a>
+      <a href="#img4"><img src="poze/casa4.jpg"></a>
+      <a href="#img5"><img src="poze/casa5.jpg"></a>
+      <a href="#img6"><img src="poze/casa6.jpg"></a>
+    </div>
+
+    <!-- Lightbox-uri -->
+    <div id="img1" class="lightbox">
+      <a href="#"><img src="poze/casa1.jpg"></a>
+    </div>
+    <div id="img2" class="lightbox">
+      <a href="#"><img src="poze/casa2.jpg"></a>
+    </div>
+    <div id="img3" class="lightbox">
+      <a href="#"><img src="poze/casa3.jpg"></a>
+    </div>
+    <div id="img4" class="lightbox">
+      <a href="#"><img src="poze/casa4.jpg"></a>
+    </div>
+    <div id="img5" class="lightbox">
+      <a href="#"><img src="poze/casa5.jpg"></a>
+    </div>
+    <div id="img6" class="lightbox">
+      <a href="#"><img src="poze/casa6.jpg"></a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+    <h2>Contact & Programări</h2>
+    <p>📞 <strong>Telefon:</strong> <span>+40 765 016 108</span></p>
+    <p>📩 <strong>Email:</strong> <span>chehnesaber@gmail.com</span></p>
+    <p>🏢 Vizionările se fac doar cu programare prealabilă. Sună sau scrie-ne pentru a stabili o întâlnire.</p>
+
+    <a href="tel:+40765016108">📞 Sună acum</a>
+    <a href="mailto:chehnesaber@gmail.com">📩 Trimite Email</a>
+
+    <form action="#" method="POST">
+      <label for="nume">Nume complet:</label>
+      <input type="text" id="nume" name="nume" placeholder="Ex: Andrei Popescu" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="ex: exemplu@gmail.com" required>
+
+      <label for="mesaj">Mesaj:</label>
+      <textarea id="mesaj" name="mesaj" rows="5" placeholder="Scrie mesajul tău..." required></textarea>
+
+      <button type="submit">Trimite mesaj</button>
+    </form>
+
+    <!-- Harta Google -->
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.000000!2d23.000000!3d44.300000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDE4JzMwLjAiTiAyM8KwMDAnMDAuMCJF!5e0!3m2!1sro!2sro!4v1690000000000!5m2!1sro!2sro" 
+        allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Cartier Rezidențial Saber | Craiova</p>
+  </footer>
+
+</body>
+</html>

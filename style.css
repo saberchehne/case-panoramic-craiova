@@ -34,3 +34,19 @@
 
 /* Smooth scroll pentru link-uri */
 html { scroll-behavior:smooth; }
+/* Logo în header */
+.logo-titlu {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* dacă vrei logo-ul complet în stânga, pune flex-start */
+  gap: 20px; /* spațiu între logo și titlu */
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem; /* mărimea literei S */
+  font-weight: 700;
+  color: #d4af37; /* culoarea aurie */
+}
+
+
